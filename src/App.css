@@ -36,3 +36,59 @@
     transform: rotate(360deg);
   }
 }
+
+.App {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 240px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.content {
+  flex: 1;
+  transition: margin-left 0.3s;
+}
+
+.content.ml-64 {
+  margin-left: 240px;
+}
+
+.sidebar-toggle {
+  background-color: #333;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.sidebar-toggle:hover {
+  background-color: #555;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  cursor: pointer;
+}
+
+li:hover {
+  background-color: #ddd;
+}
